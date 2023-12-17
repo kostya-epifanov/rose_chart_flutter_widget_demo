@@ -14,7 +14,7 @@ import 'package:rose_chart_widget_demo/widget/painter/components/radial_axes_com
 import 'package:rose_chart_widget_demo/widget/painter/components/sectors_group_component.dart';
 import 'package:rose_chart_widget_demo/widget/painter/personality_chart_painter.dart';
 
-class PersonalityChartWidget extends StatefulWidget {
+class RoseChartWidget extends StatefulWidget {
   final int maxStrength;
   final List<ChartSectorModelImpl> storyPartViewModels;
 
@@ -23,7 +23,7 @@ class PersonalityChartWidget extends StatefulWidget {
 
   final ChartSectorModel sectorOnTop;
   final int centralSectorsActiveCount;
-  final PersonalityChartTransition transition;
+  final ChartTransition transition;
   final double transitionAnimationValue;
 
   final void Function() onTapSelectorLeft;
@@ -32,7 +32,8 @@ class PersonalityChartWidget extends StatefulWidget {
   final void Function(ChartSectorModel) onTapSector;
   final void Function() onTapBasic;
 
-  const PersonalityChartWidget({
+  const RoseChartWidget({
+    super.key,
     required this.maxStrength,
     required this.storyPartViewModels,
     required this.sectorOnTop,
@@ -46,11 +47,10 @@ class PersonalityChartWidget extends StatefulWidget {
   });
 
   @override
-  State<PersonalityChartWidget> createState() => _PersonalityChartWidgetState();
+  State<RoseChartWidget> createState() => _RoseChartWidgetState();
 }
 
-class _PersonalityChartWidgetState extends State<PersonalityChartWidget>
-    with SingleTickerProviderStateMixin {
+class _RoseChartWidgetState extends State<RoseChartWidget> with SingleTickerProviderStateMixin {
   double get _centralCircleRadiusMod => 0.25;
 
   double get _radialStrokeWidth => 2.0;
@@ -93,7 +93,7 @@ class _PersonalityChartWidgetState extends State<PersonalityChartWidget>
   }
 
   @override
-  void didUpdateWidget(covariant PersonalityChartWidget oldWidget) {
+  void didUpdateWidget(covariant RoseChartWidget oldWidget) {
     if (oldWidget.sectorOnTop.contextCategory != widget.sectorOnTop.contextCategory) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
         _rotateChart(oldWidget.sectorOnTop, widget.sectorOnTop);
@@ -229,7 +229,7 @@ class _PersonalityChartWidgetState extends State<PersonalityChartWidget>
                   ),
                 ),
               ),
-              if (widget.transition.toState == const PersonalityChartState.detailed()) ...[
+              if (widget.transition.toState == const ChartState.detailed()) ...[
                 Align(
                   alignment: Alignment.centerLeft,
                   child: _widgetSelectorButton(isLeft: true),

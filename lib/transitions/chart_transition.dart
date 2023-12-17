@@ -3,16 +3,16 @@ import 'dart:math';
 import 'package:flutter/widgets.dart';
 import 'package:rose_chart_widget_demo/transitions/chart_state.dart';
 
-class PersonalityChartTransition {
-  final PersonalityChartState fromState;
-  final PersonalityChartState toState;
+class ChartTransition {
+  final ChartState fromState;
+  final ChartState toState;
 
-  const PersonalityChartTransition({
+  const ChartTransition({
     required this.fromState,
     required this.toState,
   });
 
-  bool get havePluses => toState != const PersonalityChartState.detailed();
+  bool get havePluses => toState != const ChartState.detailed();
 
   double calcWidgetHeight({
     required double transitionValue,
@@ -63,7 +63,7 @@ class PersonalityChartTransition {
   }
 
   double calcLabelAlpha({
-    required PersonalityChartState stateAttachedToLabel,
+    required ChartState stateAttachedToLabel,
     required double transitionValue,
   }) {
     if (fromState == stateAttachedToLabel) {

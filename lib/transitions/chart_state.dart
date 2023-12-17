@@ -1,4 +1,4 @@
-class PersonalityChartState {
+class ChartState {
   final String testTitle;
   final double widgetHeight;
   final double scaleMod;
@@ -9,7 +9,7 @@ class PersonalityChartState {
   final double chartXoffset;
   final double chartYoffset;
 
-  const PersonalityChartState._({
+  const ChartState._({
     required this.testTitle,
     required this.widgetHeight,
     required this.scaleMod,
@@ -22,12 +22,12 @@ class PersonalityChartState {
   });
 
   static const types = [
-    PersonalityChartState.base(),
-    PersonalityChartState.summary(),
-    PersonalityChartState.detailed(),
+    ChartState.base(),
+    ChartState.summary(),
+    ChartState.detailed(),
   ];
 
-  const PersonalityChartState.base()
+  const ChartState.base()
       : this._(
           testTitle: 'base',
           widgetHeight: 360,
@@ -40,7 +40,7 @@ class PersonalityChartState {
           chartYoffset: -15,
         );
 
-  const PersonalityChartState.summary()
+  const ChartState.summary()
       : this._(
           testTitle: 'summary',
           widgetHeight: 264,
@@ -53,7 +53,7 @@ class PersonalityChartState {
           chartYoffset: 0,
         );
 
-  const PersonalityChartState.detailed()
+  const ChartState.detailed()
       : this._(
           testTitle: 'detailed',
           widgetHeight: 176,

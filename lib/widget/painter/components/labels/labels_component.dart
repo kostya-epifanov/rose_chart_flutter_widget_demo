@@ -22,7 +22,7 @@ class LabelsComponent extends ExtendedCustomPainter {
 
   final RotateTransition rotateTransition;
 
-  final PersonalityChartTransition transition;
+  final ChartTransition transition;
   final double stateTransitionValue;
 
   final double adjustedAngleToTop;
@@ -66,7 +66,7 @@ class LabelsComponent extends ExtendedCustomPainter {
       markWidth: markWidth,
       markOffset: markOffset,
       paintAlphaValue: transition.calcLabelAlpha(
-        stateAttachedToLabel: const PersonalityChartState.base(),
+        stateAttachedToLabel: const ChartState.base(),
         transitionValue: stateTransitionValue,
       ),
       rotateTransition: rotateTransition,
@@ -85,7 +85,7 @@ class LabelsComponent extends ExtendedCustomPainter {
       markWidth: markWidth,
       markOffset: markOffset,
       paintAlphaValue: transition.calcLabelAlpha(
-        stateAttachedToLabel: const PersonalityChartState.summary(),
+        stateAttachedToLabel: const ChartState.summary(),
         transitionValue: stateTransitionValue,
       ),
     ).extendedPaint(canvas, originalSize, scaledSize, translation);

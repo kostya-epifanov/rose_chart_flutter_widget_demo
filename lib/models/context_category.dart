@@ -2,10 +2,12 @@ import 'dart:convert';
 
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
+import 'package:rose_chart_widget_demo/utils.dart';
+
+const int demoChartSectorMaxStrength = 6;
 
 class ContextCategory extends Equatable {
   final String name;
-  // final bool isObligated;
 
   Color get color {
     switch (name) {
@@ -22,8 +24,7 @@ class ContextCategory extends Equatable {
       case 'Habits':
         return const Color.fromRGBO(86, 217, 138, 1);
       default:
-        // throw Exception('ContextCategory: unsupported name: $name');
-        return Colors.grey;
+        return getRandomColor();
     }
   }
 

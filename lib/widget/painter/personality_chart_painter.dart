@@ -8,7 +8,7 @@ import 'package:rose_chart_widget_demo/widget/painter/extended_custom_painter.da
 class PersonalityChartPainter extends CustomPainter {
   final List<ExtendedCustomPainter> components;
 
-  final PersonalityChartTransition transition;
+  final ChartTransition transition;
   final double transitionValue;
 
   PersonalityChartPainter({

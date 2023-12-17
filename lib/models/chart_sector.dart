@@ -27,12 +27,6 @@ class ChartSectorModelImpl extends Equatable implements ChartSectorModel {
     required this.isEmpty,
   });
 
-  @override
-  List<Object> get props => [
-        strength,
-        contextCategory,
-      ];
-
   ChartSectorModelImpl copyWith({
     int? strength,
     ContextCategory? contextCategory,
@@ -44,4 +38,10 @@ class ChartSectorModelImpl extends Equatable implements ChartSectorModel {
       isEmpty: isEmpty ?? this.isEmpty,
     );
   }
+
+  @override
+  List<Object> get props => [
+        strength,
+        contextCategory,
+      ];
 }

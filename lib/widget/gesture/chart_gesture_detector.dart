@@ -11,7 +11,7 @@ class ChartGestureDetector extends StatefulWidget {
   final List<ChartSectorModel> dataList;
   final double centralCircleRadiusMod;
   final double offsetForLabels;
-  final PersonalityChartTransition chartTransition;
+  final ChartTransition chartTransition;
   final double chartTransitionValue;
   final RotateTransition rotateTransition;
   final void Function(ChartSectorModel) onTapSector;

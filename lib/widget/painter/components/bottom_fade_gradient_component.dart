@@ -5,7 +5,7 @@ import 'package:rose_chart_widget_demo/widget/painter/extended_custom_painter.da
 
 class BottomFadeGradientComponent extends ExtendedCustomPainter {
   final Color color;
-  final PersonalityChartTransition transition;
+  final ChartTransition transition;
   final double transitionValue;
   final double chartXOffset;
 

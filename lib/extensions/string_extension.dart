@@ -17,6 +17,7 @@ extension StringExtension on String {
 
 extension NullableStringExtension on String? {
   bool get isNullOrEmpty => this == null || this!.isEmpty;
+
   String getValueOrElse(String orElse) => isNullOrEmpty ? orElse : this!;
 }
 

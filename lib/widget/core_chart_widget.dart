@@ -50,9 +50,9 @@ class _CoreChartWidgetState extends State<CoreChartWidget> {
         size: Size.infinite,
         painter: PersonalityChartPainter(
           transitionValue: 1,
-          transition: const PersonalityChartTransition(
-            fromState: PersonalityChartState.base(),
-            toState: PersonalityChartState.base(),
+          transition: const ChartTransition(
+            fromState: ChartState.base(),
+            toState: ChartState.base(),
           ),
           components: [
             CircularAxesComponent(
