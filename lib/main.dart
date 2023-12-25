@@ -91,11 +91,11 @@ class RoseChartDemoScreenState extends State<RoseChartDemoScreen> {
   }
 
   void _onTapChartSector(ChartSectorModel data) {
-    //showCustomSnackbar(CustomSnackBarMessage(text: '\"${data.title}\" tap!'));
+    print("LOG: _onTapChartSector");
   }
 
   void _onTapChartBasic() {
-    //showCustomSnackbar(CustomSnackBarMessage(text: '\"BASIC\" tap!'));
+    print("LOG: _onTapChartBasic");
   }
 
   @override
