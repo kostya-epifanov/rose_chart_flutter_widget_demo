@@ -60,8 +60,8 @@ class SummaryLabelsComponent extends ExtendedCustomPainter {
           -translation.dx + offset,
           -translation.dy + (_textPainter.height + offsetForLabels / 2) * (index + 1),
         ),
-        model.contextCategory.title,
-        model.contextCategory.color,
+        model.category.title,
+        model.category.color,
       );
     }
   }

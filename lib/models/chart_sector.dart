@@ -1,13 +1,13 @@
 import 'package:equatable/equatable.dart';
-import 'package:rose_chart_widget_demo/models/context_category.dart';
+import 'package:rose_chart_widget_demo/models/category.dart';
 
 abstract class ChartSectorModel {
   final int strength;
-  final ContextCategory contextCategory;
+  final Category category;
 
   const ChartSectorModel({
     required this.strength,
-    required this.contextCategory,
+    required this.category,
   });
 }
 
@@ -15,7 +15,7 @@ class ChartSectorModelImpl extends Equatable implements ChartSectorModel {
   @override
   final int strength;
   @override
-  final ContextCategory contextCategory;
+  final Category category;
 
   final bool isEmpty;
 
@@ -23,18 +23,18 @@ class ChartSectorModelImpl extends Equatable implements ChartSectorModel {
 
   const ChartSectorModelImpl({
     required this.strength,
-    required this.contextCategory,
+    required this.category,
     required this.isEmpty,
   });
 
   ChartSectorModelImpl copyWith({
     int? strength,
-    ContextCategory? contextCategory,
+    Category? category,
     bool? isEmpty,
   }) {
     return ChartSectorModelImpl(
       strength: strength ?? this.strength,
-      contextCategory: contextCategory ?? this.contextCategory,
+      category: category ?? this.category,
       isEmpty: isEmpty ?? this.isEmpty,
     );
   }
@@ -42,6 +42,6 @@ class ChartSectorModelImpl extends Equatable implements ChartSectorModel {
   @override
   List<Object> get props => [
         strength,
-        contextCategory,
+        category,
       ];
 }

@@ -30,7 +30,6 @@ class CircularLabelsComponent extends ExtendedCustomPainter {
 
   late Offset _center;
   late double _sectorAngle;
-  late double _centralCircleRadius;
   late double _drawOffsetRadius;
   late double _sectorOuterSideWidth;
 
@@ -59,8 +58,7 @@ class CircularLabelsComponent extends ExtendedCustomPainter {
   ) {
     _center = Offset(originalSize.width / 2, scaledSize.height / 2 + chartYOffset);
     _sectorAngle = 2 * pi / data.length;
-    _centralCircleRadius = scaledSize.width * centralCircleRadiusMod / 2;
-    _drawOffsetRadius = scaledSize.width / 2 - _centralCircleRadius + offsetForLabels;
+    _drawOffsetRadius = scaledSize.width / 2 - offsetForLabels;
     _sectorOuterSideWidth = 2 * _drawOffsetRadius * sin(_sectorAngle / 2);
 
     _drawCentralLabel(canvas, centralLabelText, centralLabelMarkColor);
@@ -95,7 +93,7 @@ class CircularLabelsComponent extends ExtendedCustomPainter {
   }
 
   double _getTitleWidth(ChartSectorModel model) {
-    _textPainter.text = TextSpan(text: model.contextCategory.title, style: textStyle);
+    _textPainter.text = TextSpan(text: model.category.title, style: textStyle);
     _textPainter.layout();
     return _textPainter.width / _sectorOuterSideWidth;
   }
@@ -108,12 +106,10 @@ class CircularLabelsComponent extends ExtendedCustomPainter {
     double nextAngle = 0;
 
     if (!isReversedSector) {
-      nextAngle =
-          _drawMarkAtAngle(canvas: canvas, angle: nextAngle, color: model.contextCategory.color);
+      nextAngle = _drawMarkAtAngle(canvas: canvas, angle: nextAngle, color: model.category.color);
     }
 
-    final characters =
-        model.contextCategory.title.runes.map((e) => String.fromCharCode(e)).toList();
+    final characters = model.category.title.runes.map((e) => String.fromCharCode(e)).toList();
 
     for (int index = 0; index < characters.length; index++) {
       nextAngle = _drawLetterAtAngle(
@@ -126,8 +122,7 @@ class CircularLabelsComponent extends ExtendedCustomPainter {
 
     if (isReversedSector) {
       canvas.translate(7, 1);
-      nextAngle =
-          _drawMarkAtAngle(canvas: canvas, angle: nextAngle, color: model.contextCategory.color);
+      nextAngle = _drawMarkAtAngle(canvas: canvas, angle: nextAngle, color: model.category.color);
     }
   }
 
@@ -140,7 +135,7 @@ class CircularLabelsComponent extends ExtendedCustomPainter {
     _textPainter.text = TextSpan(
       text: letter,
       style: textStyle.copyWith(
-        color: textStyle.color?.withOpacity(paintAlphaValue.clamp(0, 0.7)),
+        color: textStyle.color?.withOpacity(paintAlphaValue.clamp(0, 1.0)),
       ),
     );
     _textPainter.layout(

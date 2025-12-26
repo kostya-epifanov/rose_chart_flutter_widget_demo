@@ -9,10 +9,9 @@ import 'package:rose_chart_widget_demo/widget/gesture/chart_gesture_detector.dar
 import 'package:rose_chart_widget_demo/widget/painter/components/bottom_fade_gradient_component.dart';
 import 'package:rose_chart_widget_demo/widget/painter/components/circular_axes_component.dart';
 import 'package:rose_chart_widget_demo/widget/painter/components/labels/labels_component.dart';
-import 'package:rose_chart_widget_demo/widget/painter/components/plus_icons_component.dart';
 import 'package:rose_chart_widget_demo/widget/painter/components/radial_axes_component.dart';
 import 'package:rose_chart_widget_demo/widget/painter/components/sectors_group_component.dart';
-import 'package:rose_chart_widget_demo/widget/painter/personality_chart_painter.dart';
+import 'package:rose_chart_widget_demo/widget/painter/rose_chart_painter.dart';
 
 class RoseChartWidget extends StatefulWidget {
   final int maxStrength;
@@ -94,7 +93,7 @@ class _RoseChartWidgetState extends State<RoseChartWidget> with SingleTickerProv
 
   @override
   void didUpdateWidget(covariant RoseChartWidget oldWidget) {
-    if (oldWidget.sectorOnTop.contextCategory != widget.sectorOnTop.contextCategory) {
+    if (oldWidget.sectorOnTop.category != widget.sectorOnTop.category) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
         _rotateChart(oldWidget.sectorOnTop, widget.sectorOnTop);
       });
@@ -125,9 +124,6 @@ class _RoseChartWidgetState extends State<RoseChartWidget> with SingleTickerProv
 
     final adjustedAngleToTop = -pi / 2 - (pi / widget.chartSectors.length);
 
-    const plusIconBackgroundColor = Color(0xFFF0F0F8);
-    const plusIconColor = Colors.white;
-
     return ClipRect(
       child: Padding(
         padding: EdgeInsets.only(top: _offsetForLabels),
@@ -151,7 +147,7 @@ class _RoseChartWidgetState extends State<RoseChartWidget> with SingleTickerProv
                 chartYOffset: chartYOffset,
                 chart: CustomPaint(
                   size: Size.infinite,
-                  painter: PersonalityChartPainter(
+                  painter: RoseChartPainter(
                     transitionValue: widget.transitionAnimationValue,
                     transition: widget.transition,
                     components: [
@@ -187,7 +183,7 @@ class _RoseChartWidgetState extends State<RoseChartWidget> with SingleTickerProv
                         chartXOffset: chartXOffset,
                         chartYOffset: chartYOffset,
                       ),
-                      if (widget.transition.havePluses)
+                      /*if (widget.transition.havePluses)
                         PlusIconsComponent(
                           adjustedAngleToTop: adjustedAngleToTop,
                           sectorsData: widget.chartSectors,
@@ -199,7 +195,7 @@ class _RoseChartWidgetState extends State<RoseChartWidget> with SingleTickerProv
                           rotateTransition: _rotateTransition,
                           chartYOffset: chartYOffset,
                           isShowCenterPlus: widget.centralSectorsActiveCount == 0,
-                        ),
+                        ),*/
                       LabelsComponent(
                         adjustedAngleToTop: adjustedAngleToTop,
                         data: widget.chartSectors,

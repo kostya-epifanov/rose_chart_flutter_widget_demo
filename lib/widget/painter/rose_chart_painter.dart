@@ -5,13 +5,13 @@ import 'package:flutter/widgets.dart';
 import 'package:rose_chart_widget_demo/transitions/chart_transition.dart';
 import 'package:rose_chart_widget_demo/widget/painter/extended_custom_painter.dart';
 
-class PersonalityChartPainter extends CustomPainter {
+class RoseChartPainter extends CustomPainter {
   final List<ExtendedCustomPainter> components;
 
   final ChartTransition transition;
   final double transitionValue;
 
-  PersonalityChartPainter({
+  RoseChartPainter({
     required this.components,
     required this.transition,
     required this.transitionValue,

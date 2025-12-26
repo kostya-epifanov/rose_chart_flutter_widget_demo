@@ -6,7 +6,7 @@ import 'package:rose_chart_widget_demo/transitions/rotate_transition.dart';
 import 'package:rose_chart_widget_demo/widget/painter/components/circular_axes_component.dart';
 import 'package:rose_chart_widget_demo/widget/painter/components/radial_axes_component.dart';
 import 'package:rose_chart_widget_demo/widget/painter/components/sectors_group_component.dart';
-import 'package:rose_chart_widget_demo/widget/painter/personality_chart_painter.dart';
+import 'package:rose_chart_widget_demo/widget/painter/rose_chart_painter.dart';
 
 class CoreChartWidget extends StatefulWidget {
   final List<ChartSectorModelImpl> storyPartViewModels;
@@ -48,7 +48,7 @@ class _CoreChartWidgetState extends State<CoreChartWidget> {
       width: 200,
       child: CustomPaint(
         size: Size.infinite,
-        painter: PersonalityChartPainter(
+        painter: RoseChartPainter(
           transitionValue: 1,
           transition: const ChartTransition(
             fromState: ChartState.base(),

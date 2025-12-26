@@ -1,8 +1,8 @@
 import 'dart:math';
 import 'dart:ui';
 
+import 'package:rose_chart_widget_demo/models/category.dart';
 import 'package:rose_chart_widget_demo/models/chart_sector.dart';
-import 'package:rose_chart_widget_demo/models/context_category.dart';
 
 Color getRandomColor() {
   final rnd = Random();
@@ -15,9 +15,9 @@ Color getRandomColor() {
 }
 
 List<ChartSectorModelImpl> generateRandomSizeTestList({
-  int minSize = 4,
-  int maxSize = 12,
-  int minStrength = 0,
+  int minSize = 6,
+  int maxSize = 8,
+  int minStrength = 1,
   int maxStrength = demoChartSectorMaxStrength + 1,
   bool isInitial = false,
 }) {
@@ -25,7 +25,7 @@ List<ChartSectorModelImpl> generateRandomSizeTestList({
   return List.generate(size, (index) {
     return ChartSectorModelImpl(
       strength: isInitial ? 0 : minStrength + Random().nextInt(maxStrength - minStrength),
-      contextCategory: ContextCategory(name: 'RND$index'),
+      category: Category(name: 'RND$index'),
       isEmpty: false,
     );
   });
@@ -35,32 +35,32 @@ List<ChartSectorModelImpl> generateFixedTestList() {
   return [
     const ChartSectorModelImpl(
       strength: 0,
-      contextCategory: ContextCategory(name: 'Goals'),
+      category: Category(name: 'Sector A'),
       isEmpty: false,
     ),
     const ChartSectorModelImpl(
       strength: 1,
-      contextCategory: ContextCategory(name: 'Physiological'),
+      category: Category(name: 'Sector B'),
       isEmpty: false,
     ),
     const ChartSectorModelImpl(
       strength: 2,
-      contextCategory: ContextCategory(name: 'Hidden Detail'),
+      category: Category(name: 'Sector C'),
       isEmpty: false,
     ),
     const ChartSectorModelImpl(
       strength: 3,
-      contextCategory: ContextCategory(name: 'Intellectual'),
+      category: Category(name: 'Sector D'),
       isEmpty: false,
     ),
     const ChartSectorModelImpl(
       strength: 4,
-      contextCategory: ContextCategory(name: 'Psychological'),
+      category: Category(name: 'Sector E'),
       isEmpty: false,
     ),
     const ChartSectorModelImpl(
       strength: 5,
-      contextCategory: ContextCategory(name: 'Habits'),
+      category: Category(name: 'Sector F'),
       isEmpty: false,
     ),
   ];

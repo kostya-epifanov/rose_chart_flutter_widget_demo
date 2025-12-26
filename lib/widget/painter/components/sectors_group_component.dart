@@ -92,7 +92,7 @@ class SectorsGroupComponent extends ExtendedCustomPainter {
     final path = Path();
 
     final paint = Paint()
-      ..color = model.contextCategory.color.withOpacity(fillColorOpacity)
+      ..color = model.category.color.withOpacity(fillColorOpacity)
       ..style = PaintingStyle.fill;
 
     path.moveTo(
@@ -140,7 +140,7 @@ class SectorsGroupComponent extends ExtendedCustomPainter {
   ) {
     final path = Path();
     final paint = Paint()
-      ..color = model.contextCategory.color
+      ..color = model.category.color
       ..style = PaintingStyle.fill;
 
     path.moveTo(

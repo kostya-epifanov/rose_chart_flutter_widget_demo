@@ -6,58 +6,57 @@ import 'package:rose_chart_widget_demo/utils.dart';
 
 const int demoChartSectorMaxStrength = 6;
 
-class ContextCategory extends Equatable {
+class Category extends Equatable {
   final String name;
 
   Color get color {
     switch (name) {
-      case 'Goals':
+      case 'Category A':
         return const Color.fromRGBO(187, 231, 63, 1);
-      case 'Physiological':
+      case 'Category B':
         return const Color.fromRGBO(255, 185, 79, 1);
-      case 'Hidden Detail':
+      case 'Category C':
         return const Color.fromRGBO(247, 85, 124, 1);
-      case 'Intellectual':
+      case 'Category D':
         return const Color.fromRGBO(230, 116, 255, 1);
-      case 'Psychological':
+      case 'Category E':
         return const Color.fromRGBO(79, 102, 255, 1);
-      case 'Habits':
+      case 'Category F':
         return const Color.fromRGBO(86, 217, 138, 1);
       default:
         return getRandomColor();
     }
   }
 
-  const ContextCategory.empty() : this(name: '');
+  const Category.empty() : this(name: '');
 
   bool get isEmpty => name.isEmpty;
 
   String get title => name.replaceAll('_', ' ').toUpperCase();
 
-  const ContextCategory({
+  const Category({
     required this.name,
   });
 
-  factory ContextCategory.fromMap(Map<String, dynamic> map) {
-    return ContextCategory(
+  factory Category.fromMap(Map<String, dynamic> map) {
+    return Category(
       name: map['name'] ?? '',
     );
   }
 
-  factory ContextCategory.fromJson(String source) =>
-      ContextCategory.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory Category.fromJson(String source) =>
+      Category.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
-  String toString() => 'ContextCategory(name: $name)';
+  String toString() => 'Category(name: $name)';
 
   @override
   List<Object> get props => [name];
 }
 
-extension ContextCategoryX on ContextCategory {
-  static List<ContextCategory> fromJsonList(String data) => (jsonDecode(data) as List)
-      .map((e) => ContextCategory.fromMap(e as Map<String, dynamic>))
-      .toList();
+extension CategoryX on Category {
+  static List<Category> fromJsonList(String data) =>
+      (jsonDecode(data) as List).map((e) => Category.fromMap(e as Map<String, dynamic>)).toList();
 
-  static ContextCategory fromJson(String json) => ContextCategory.fromJson(json);
+  static Category fromJson(String json) => Category.fromJson(json);
 }

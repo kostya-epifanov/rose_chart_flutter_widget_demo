@@ -5,7 +5,7 @@ import 'package:rose_chart_widget_demo/models/chart_sector.dart';
 import 'package:rose_chart_widget_demo/transitions/chart_state.dart';
 import 'package:rose_chart_widget_demo/transitions/chart_transition.dart';
 import 'package:rose_chart_widget_demo/utils.dart';
-import 'package:rose_chart_widget_demo/widget/personality_chart_widget.dart';
+import 'package:rose_chart_widget_demo/widget/rose_chart_widget.dart';
 
 void main() {
   runApp(
@@ -53,7 +53,7 @@ class RoseChartDemoScreenState extends State<RoseChartDemoScreen> {
     setState(() {});
   }
 
-  void _onTapGeneratePersonality() {
+  void _onTapGenerate() {
     _dataList = generateFixedTestList();
     _dataUnitOnTop = _dataList!.first;
     _centralSectorsActiveCount = Random().nextInt(_dataList!.length + 1);
@@ -189,7 +189,7 @@ class RoseChartDemoScreenState extends State<RoseChartDemoScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: RawMaterialButton(
                     child: const Text('GENERATE FIXED'),
-                    onPressed: () => _onTapGeneratePersonality(),
+                    onPressed: () => _onTapGenerate(),
                   ),
                 ),
               ],
