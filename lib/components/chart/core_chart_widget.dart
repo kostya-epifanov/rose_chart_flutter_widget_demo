@@ -3,10 +3,10 @@ import 'package:rose_chart_widget_demo/models/chart_sector.dart';
 import 'package:rose_chart_widget_demo/transitions/chart_state.dart';
 import 'package:rose_chart_widget_demo/transitions/chart_transition.dart';
 import 'package:rose_chart_widget_demo/transitions/rotate_transition.dart';
-import 'package:rose_chart_widget_demo/widget/painter/components/circular_axes_component.dart';
-import 'package:rose_chart_widget_demo/widget/painter/components/radial_axes_component.dart';
-import 'package:rose_chart_widget_demo/widget/painter/components/sectors_group_component.dart';
-import 'package:rose_chart_widget_demo/widget/painter/rose_chart_painter.dart';
+import 'package:rose_chart_widget_demo/components/rendering/axes/circular_axes_component.dart';
+import 'package:rose_chart_widget_demo/components/rendering/axes/radial_axes_component.dart';
+import 'package:rose_chart_widget_demo/components/rendering/sectors/sectors_group_component.dart';
+import 'package:rose_chart_widget_demo/components/rendering/painter/rose_chart_painter.dart';
 
 class CoreChartWidget extends StatefulWidget {
   final List<ChartSectorModelImpl> storyPartViewModels;

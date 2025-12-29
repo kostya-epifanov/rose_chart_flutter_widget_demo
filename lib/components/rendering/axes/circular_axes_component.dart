@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rose_chart_widget_demo/widget/painter/extended_custom_painter.dart';
+import 'package:rose_chart_widget_demo/components/rendering/painter/extended_custom_painter.dart';
 
 class CircularAxesComponent extends ExtendedCustomPainter {
   final BuildContext context;

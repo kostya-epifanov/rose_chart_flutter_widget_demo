@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:rose_chart_widget_demo/extensions/string_extension.dart';
 import 'package:rose_chart_widget_demo/models/chart_sector.dart';
-import 'package:rose_chart_widget_demo/widget/painter/extended_custom_painter.dart';
+import 'package:rose_chart_widget_demo/components/rendering/painter/extended_custom_painter.dart';
 
 class SummaryLabelsComponent extends ExtendedCustomPainter {
   final List<ChartSectorModel> data;

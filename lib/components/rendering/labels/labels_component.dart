@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:rose_chart_widget_demo/components/rendering/labels/circular_labels_component.dart';
+import 'package:rose_chart_widget_demo/components/rendering/labels/summary_labels_component.dart';
 import 'package:rose_chart_widget_demo/models/chart_sector.dart';
 import 'package:rose_chart_widget_demo/transitions/chart_state.dart';
 import 'package:rose_chart_widget_demo/transitions/chart_transition.dart';
 import 'package:rose_chart_widget_demo/transitions/rotate_transition.dart';
-import 'package:rose_chart_widget_demo/widget/painter/components/labels/circular_labels_component.dart';
-import 'package:rose_chart_widget_demo/widget/painter/components/labels/summary_labels_component.dart';
-import 'package:rose_chart_widget_demo/widget/painter/extended_custom_painter.dart';
+import 'package:rose_chart_widget_demo/components/rendering/painter/extended_custom_painter.dart';
 
 class LabelsComponent extends ExtendedCustomPainter {
   final List<ChartSectorModel> data;

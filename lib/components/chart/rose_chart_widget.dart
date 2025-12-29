@@ -5,13 +5,13 @@ import 'package:rose_chart_widget_demo/models/chart_sector.dart';
 import 'package:rose_chart_widget_demo/transitions/chart_state.dart';
 import 'package:rose_chart_widget_demo/transitions/chart_transition.dart';
 import 'package:rose_chart_widget_demo/transitions/rotate_transition.dart';
-import 'package:rose_chart_widget_demo/widget/gesture/chart_gesture_detector.dart';
-import 'package:rose_chart_widget_demo/widget/painter/components/bottom_fade_gradient_component.dart';
-import 'package:rose_chart_widget_demo/widget/painter/components/circular_axes_component.dart';
-import 'package:rose_chart_widget_demo/widget/painter/components/labels/labels_component.dart';
-import 'package:rose_chart_widget_demo/widget/painter/components/radial_axes_component.dart';
-import 'package:rose_chart_widget_demo/widget/painter/components/sectors_group_component.dart';
-import 'package:rose_chart_widget_demo/widget/painter/rose_chart_painter.dart';
+import 'package:rose_chart_widget_demo/components/gestures/chart_gesture_detector.dart';
+import 'package:rose_chart_widget_demo/components/rendering/effects/bottom_fade_gradient_component.dart';
+import 'package:rose_chart_widget_demo/components/rendering/axes/circular_axes_component.dart';
+import 'package:rose_chart_widget_demo/components/rendering/labels/labels_component.dart';
+import 'package:rose_chart_widget_demo/components/rendering/axes/radial_axes_component.dart';
+import 'package:rose_chart_widget_demo/components/rendering/sectors/sectors_group_component.dart';
+import 'package:rose_chart_widget_demo/components/rendering/painter/rose_chart_painter.dart';
 
 class RoseChartWidget extends StatefulWidget {
   final int maxStrength;

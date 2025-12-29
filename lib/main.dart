@@ -5,7 +5,7 @@ import 'package:rose_chart_widget_demo/models/chart_sector.dart';
 import 'package:rose_chart_widget_demo/transitions/chart_state.dart';
 import 'package:rose_chart_widget_demo/transitions/chart_transition.dart';
 import 'package:rose_chart_widget_demo/utils.dart';
-import 'package:rose_chart_widget_demo/widget/rose_chart_widget.dart';
+import 'package:rose_chart_widget_demo/components/chart/rose_chart_widget.dart';
 
 void main() {
   runApp(
@@ -38,7 +38,7 @@ class RoseChartDemoScreenState extends State<RoseChartDemoScreen> {
   @override
   void initState() {
     super.initState();
-    _dataList ??= generateRandomSizeTestList();
+    _dataList ??= generateFixedTestList();
     _dataUnitOnTop ??= _dataList!.first;
   }
 

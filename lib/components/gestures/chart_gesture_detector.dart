@@ -4,7 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:rose_chart_widget_demo/models/chart_sector.dart';
 import 'package:rose_chart_widget_demo/transitions/chart_transition.dart';
 import 'package:rose_chart_widget_demo/transitions/rotate_transition.dart';
-import 'package:rose_chart_widget_demo/widget/gesture/measure_size_widget.dart';
+import 'package:rose_chart_widget_demo/components/gestures/measure_size_widget.dart';
 
 class ChartGestureDetector extends StatefulWidget {
   final Widget chart;

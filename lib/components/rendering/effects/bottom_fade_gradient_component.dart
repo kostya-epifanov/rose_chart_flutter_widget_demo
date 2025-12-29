@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:rose_chart_widget_demo/transitions/chart_transition.dart';
-import 'package:rose_chart_widget_demo/widget/painter/extended_custom_painter.dart';
+import 'package:rose_chart_widget_demo/components/rendering/painter/extended_custom_painter.dart';
 
 class BottomFadeGradientComponent extends ExtendedCustomPainter {
   final Color color;
