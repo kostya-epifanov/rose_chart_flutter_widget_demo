@@ -6,7 +6,6 @@ import 'package:rose_chart_widget_demo/transitions/chart_state.dart';
 import 'package:rose_chart_widget_demo/transitions/chart_transition.dart';
 import 'package:rose_chart_widget_demo/transitions/rotate_transition.dart';
 import 'package:rose_chart_widget_demo/components/gestures/chart_gesture_detector.dart';
-import 'package:rose_chart_widget_demo/components/rendering/effects/bottom_fade_gradient_component.dart';
 import 'package:rose_chart_widget_demo/components/rendering/axes/circular_axes_component.dart';
 import 'package:rose_chart_widget_demo/components/rendering/labels/labels_component.dart';
 import 'package:rose_chart_widget_demo/components/rendering/axes/radial_axes_component.dart';
@@ -215,12 +214,12 @@ class _RoseChartWidgetState extends State<RoseChartWidget> with SingleTickerProv
                         chartXOffset: chartXOffset,
                         chartYOffset: chartYOffset,
                       ),
-                      BottomFadeGradientComponent(
+                      /*BottomFadeGradientComponent(
                         color: const Color(0xFF1C1F22),
                         transition: widget.transition,
                         transitionValue: widget.transitionAnimationValue,
                         chartXOffset: chartXOffset,
-                      ),
+                      ),*/
                     ],
                   ),
                 ),

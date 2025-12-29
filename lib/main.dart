@@ -60,13 +60,6 @@ class RoseChartDemoScreenState extends State<RoseChartDemoScreen> {
     setState(() {});
   }
 
-  void _onTapGenerateFixedDummy() {
-    _dataList = generateFixedTestList();
-    _dataUnitOnTop = _dataList!.first;
-    _centralSectorsActiveCount = 6;
-    setState(() {});
-  }
-
   void _onTransitionAnimSliderChanged(double value) {
     _transitionAnimationValue = value;
     setState(() {});
