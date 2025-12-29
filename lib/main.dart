@@ -176,7 +176,7 @@ class RoseChartDemoScreenState extends State<RoseChartDemoScreen> {
                     onChanged: (value) => _onTransitionAnimSliderChanged(value),
                   ),
                 ),
-                const SizedBox(height: 12),
+                const SizedBox(height: 4),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: RawMaterialButton(
@@ -184,7 +184,7 @@ class RoseChartDemoScreenState extends State<RoseChartDemoScreen> {
                     onPressed: () => _onTapGenerateRandom(),
                   ),
                 ),
-                const SizedBox(height: 12),
+                const SizedBox(height: 4),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: RawMaterialButton(
@@ -192,6 +192,7 @@ class RoseChartDemoScreenState extends State<RoseChartDemoScreen> {
                     onPressed: () => _onTapGenerate(),
                   ),
                 ),
+                const SizedBox(height: 24),
               ],
             ),
           ),

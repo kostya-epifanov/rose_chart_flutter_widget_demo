@@ -12,16 +12,22 @@ class Category extends Equatable {
   Color get color {
     switch (name) {
       case 'Category A':
+      case 'Sector A':
         return const Color.fromRGBO(187, 231, 63, 1);
       case 'Category B':
+      case 'Sector B':
         return const Color.fromRGBO(255, 185, 79, 1);
       case 'Category C':
+      case 'Sector C':
         return const Color.fromRGBO(247, 85, 124, 1);
       case 'Category D':
+      case 'Sector D':
         return const Color.fromRGBO(230, 116, 255, 1);
       case 'Category E':
+      case 'Sector E':
         return const Color.fromRGBO(79, 102, 255, 1);
       case 'Category F':
+      case 'Sector F':
         return const Color.fromRGBO(86, 217, 138, 1);
       default:
         return getRandomColor();

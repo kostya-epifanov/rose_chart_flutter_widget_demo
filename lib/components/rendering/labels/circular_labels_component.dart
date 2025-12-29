@@ -106,7 +106,11 @@ class CircularLabelsComponent extends ExtendedCustomPainter {
     double nextAngle = 0;
 
     if (!isReversedSector) {
-      nextAngle = _drawMarkAtAngle(canvas: canvas, angle: nextAngle, color: model.category.color);
+      nextAngle = _drawMarkAtAngle(
+        canvas: canvas,
+        angle: nextAngle,
+        color: model.category.color,
+      );
     }
 
     final characters = model.category.title.runes.map((e) => String.fromCharCode(e)).toList();
@@ -122,7 +126,11 @@ class CircularLabelsComponent extends ExtendedCustomPainter {
 
     if (isReversedSector) {
       canvas.translate(7, 1);
-      nextAngle = _drawMarkAtAngle(canvas: canvas, angle: nextAngle, color: model.category.color);
+      nextAngle = _drawMarkAtAngle(
+        canvas: canvas,
+        angle: nextAngle,
+        color: model.category.color,
+      );
     }
   }
 
@@ -215,6 +223,9 @@ class CircularLabelsComponent extends ExtendedCustomPainter {
     _textPainter.layout(
       maxWidth: double.maxFinite,
     );
-    _textPainter.paint(canvas, Offset(_center.dx - _textPainter.width / 2, _center.dy + 3));
+    _textPainter.paint(
+      canvas,
+      Offset(_center.dx - _textPainter.width / 2, _center.dy + 3),
+    );
   }
 }
