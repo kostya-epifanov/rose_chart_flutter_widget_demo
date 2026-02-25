@@ -11,6 +11,8 @@ This demo implements a rose chart (radar chart) widget that displays data sector
 - Gesture handling
 - Modular rendering architecture
 
+https://github.com/user-attachments/assets/f553c812-f71e-4e52-8b1c-08200ce7ae37
+
 ## 🏗️ Architecture & Design Patterns
 
 ### Component-Based Rendering
